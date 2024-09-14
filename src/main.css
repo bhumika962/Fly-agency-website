@@ -1,0 +1,662 @@
+@import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "spartan", sans-serif;
+}
+
+:root {
+  --PrimaryColour: hsl(255, 50%, 48%);
+  --SecondaryColor: hsl(180, 17% , 95%);
+  --ColorOne: hsl(15, 74%, 70%);
+  --ColorTw0: hsl(28, 100%, 82%);
+  --HoverColor: hsl(225, 56%,59%);
+  --WhiteColor:hsl(0,0%,100%);
+  --blackColor:hsl(0,0%,12%);
+  --textColor: hsl(240,1%,48%);
+  --borderColor:hsl(0,0%,83%);
+  --WhiteColorDeam: hsl(0,0%,93%);
+  --greyBg: hsl(0,0%,96%);
+  --greytext:rgb(145,145,145);
+  --inputColor: hsl(330,12%,97%);
+  --boxShadow: box-shadow: rgba(0,0,0,00.1) 0px 10px 15px -3px, rgba(0,0,0,0.5)
+  0px 4px 6px -2px;
+  --transition: .4s ease-in-out;
+}
+
+body {
+  background: var(--WhiteColor);
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+  cursor: pointer;
+}
+
+.section {
+  padding: 4rem 0 2rem;
+}
+
+.container {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.icon {
+  font-size: 1.3rem;
+  cursor: pointer;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+}
+
+.grid {
+  display: grid;
+  align-items: center;
+}
+
+.none {
+  display: none;
+}
+
+.btn {
+  padding: 0.7rem 1.5rem;
+  background: var(--PrimaryColour);
+  border: none;
+  outline: none;
+  border-radius: 0rem;
+  cursor: pointer;
+  color: var(--WhiteColor);
+}
+.btn a {
+  color: var(--WhiteColor);
+  font-weight: 500;
+}
+.btn:hover {
+  background: var(--HoverColor);
+}
+
+img, video {
+  width: 100%;
+  height: auto;
+}
+
+input {
+  font-size: 100%;
+  color: var(--greytext);
+}
+
+p {
+  font-size: 13px;
+  color: var(--greytext);
+  line-height: 22px;
+}
+
+h4 {
+  padding: 3rem 0;
+  font-weight: 700;
+  color: var(--blackColor);
+}
+
+h2 {
+  font-size: 25px;
+  padding: 1rem 0;
+  color: var(--blackColor);
+}
+
+.navBar {
+  position: fixed;
+  flex-direction: column;
+  width: 100%;
+  z-index: 1000;
+}
+.navBar .navBarOne, .navBar .navBartTwo {
+  justify-content: space-between;
+  padding: 1rem;
+  width: 100%;
+}
+.navBar .navBarOne {
+  background: var(--SecondaryColor);
+}
+.navBar .navBarOne .icon:hover {
+  color: var(--PrimaryColour);
+}
+.navBar .navBarOne .atb {
+  gap: 1rem;
+}
+.navBar .navBarOne .atb span {
+  color: var(--blackColor);
+  font-size: 13px;
+  cursor: pointer;
+}
+.navBar .navBarOne .atb span:hover {
+  color: var(--PrimaryColour);
+  font-size: 700;
+}
+.navBar .navBartTwo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  top: 3rem;
+  padding: 1.5rem 1rem;
+  position: fixed;
+  transition: 0.3s ease-in-out;
+}
+.navBar .navBartTwo .logoDiv .Airplane {
+  width: 50px;
+}
+@media screen and (max-width: 768px) {
+  .navBar .navBartTwo .navBarMenu {
+    position: absolute;
+    background: var(--SecondaryColor);
+    padding: 1.5rem;
+    border-radius: 10px;
+    top: 5rem;
+    right: -50%;
+    width: 80%;
+    transform: translateX(50%);
+    z-index: 2000;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+    border: 3px solid var(--WhiteColor);
+    transition: 0.4s ease-in-out;
+  }
+  .navBar .navBartTwo .navBarMenu .menu {
+    flex-direction: column;
+    gap: 0.5rem;
+    text-align: center;
+  }
+  .navBar .navBartTwo .navBarMenu .menu .listItems {
+    padding: 0.5rem 0;
+    cursor: pointer;
+  }
+  color:var(--blackColor) .navBar .navBartTwo .navBarMenu .menu .listItems:hover {
+    color: var(--PrimaryColour);
+    font-weight: 700;
+  }
+  .navBar .navBartTwo .navBarMenu .btnOne {
+    display: block;
+    justify-content: center;
+    margin: auto;
+    margin-top: 1rem;
+  }
+  .navBar .navBartTwo .btnTwo {
+    display: none;
+  }
+}
+.navBar .navBartTwo .toggleIcon .icon {
+  font-size: 30px;
+  color: var(--blackColor);
+}
+.navBar .navBartTwo .showNavBar {
+  right: 50%;
+  transition: 0.5s ease-in-out;
+}
+.navBar .navbar_With_Bg {
+  background: var(--SecondaryColor);
+  padding: 0.5rem 1rem;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+}
+
+.home {
+  padding-top: 10rem;
+  text-align: center;
+  gap: 2rem;
+  flex-direction: column;
+}
+.home .mainText {
+  color: var(--blackColor);
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 2.5rem;
+}
+.home .homeImages {
+  width: 100%;
+  margin: 1rem auto 0;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  border-radius: 5rem;
+}
+.home .homeImages .videoDiv {
+  width: 90%;
+}
+.home .homeImages .videoDiv .video {
+  border-radius: 10rem;
+}
+.home .homeImages .plane {
+  position: absolute;
+  width: 100%;
+  top: -10%;
+}
+
+.Search .sectionContainer {
+  width: 100%;
+  padding: 1.5rem;
+  border: 2px solid var(--greyBg);
+  border-radius: 16px;
+  row-gap: 2rem;
+}
+.Search .sectionContainer .btns {
+  background: var(--SecondaryColor);
+  padding: 0.5rem;
+  border-radius: 1rem;
+  flex-direction: column;
+  width: 100%;
+  margin: auto;
+}
+.Search .sectionContainer .btns .singleBtn {
+  padding: 0.8rem 1.5rem;
+  font-size: 13px;
+  border-radius: 3rem;
+  width: 80%;
+  text-align: center;
+}
+.Search .sectionContainer .btns .singleBtn:hover {
+  background: var(--PrimaryColour);
+  color: var(--WhiteColor);
+  font-weight: 500;
+  transition: 0.4s ease;
+}
+.Search .sectionContainer .btns .active {
+  background: var(--PrimaryColour);
+  color: var(--WhiteColor);
+  font-weight: 500;
+}
+.Search .sectionContainer .SearchInputs {
+  width: 100%;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.Search .sectionContainer .SearchInputs .singleInput .iconDiv {
+  padding: 16px 10px;
+  border-radius: 3rem;
+  background: var(--SecondaryColor);
+  margin-right: 1rem;
+}
+.Search .sectionContainer .SearchInputs .singleInput .iconDiv .icons {
+  color: var(--blackColor);
+  opacity: 0.7;
+}
+.Search .sectionContainer .SearchInputs .singleInput .texts h4 {
+  padding-top: 0;
+  padding-bottom: 0.7rem;
+  color: var(--blackColor);
+  font-weight: 700;
+}
+.Search .sectionContainer .SearchInputs .singleInput .texts input {
+  width: 95%;
+  border: none;
+  outline: none;
+  background: transparent;
+}
+.Search .sectionContainer .SearchInputs .singleInput .texts input::-moz-placeholder {
+  font-size: 12px;
+  opacity: 0.5;
+}
+.Search .sectionContainer .SearchInputs .singleInput .texts input::placeholder {
+  font-size: 12px;
+  opacity: 0.5;
+}
+
+.support .sectionContainer .tittlesDiv {
+  text-align: center;
+}
+.support .sectionContainer .tittlesDiv small {
+  letter-spacing: 0.8rem;
+  text-transform: uppercase;
+  font-size: 13px;
+  color: var(--blackColor);
+  line-height: 1.5rem;
+}
+.support .sectionContainer .infoDiv {
+  margin-top: 2rem;
+  gap: 1.5 rem;
+}
+.support .sectionContainer .infoDiv .textDiv {
+  gap: 1.5rem;
+}
+.support .sectionContainer .infoDiv .textDiv .singleInfo .number {
+  background: var(--PrimaryColour);
+  padding: 5px 12px;
+  width: 40px;
+  border-radius: 3rem;
+  text-align: center;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--WhiteColor);
+}
+.support .sectionContainer .infoDiv .textDiv .singleInfo .colorOne {
+  background: var(--ColorOne);
+}
+.support .sectionContainer .infoDiv .textDiv .singleInfo .colorTwo {
+  background: var(--blackColor);
+}
+.support .sectionContainer .infoDiv .imgDiv {
+  margin: auto;
+}
+.support .sectionContainer .infoDiv .imgDiv img {
+  width: 100%;
+  max-width: 420px;
+}
+
+.footer {
+  background: var(--SecondaryColor);
+}
+.footer .sectionContainer {
+  gap: 2.5rem;
+}
+.footer .sectionContainer .gridOne {
+  gap: 1rem;
+  justify-content: center;
+  margin: auto;
+}
+.footer .sectionContainer .gridOne .logoDiv .Logo {
+  width: 20%;
+}
+.footer .sectionContainer .gridOne .socialIcon {
+  margin-top: 1rem;
+  gap: 1rem;
+}
+.footer .sectionContainer .gridOne .socialIcon .icon {
+  height: 50px;
+  width: 30px;
+  border-radius: 10rem;
+  border: 1px solid var(--borderColor);
+  box-shadow: var(--boxShadow);
+  padding: 0.4rem;
+  color: var(--greytext);
+}
+.footer .sectionContainer .gridOne .socialIcon .icon:hover {
+  background: var(--PrimaryColour);
+  transform: translateY(-7px);
+  transition: var(--transition);
+  border: 1px solid var(--PrimaryColour);
+  color: var(--WhiteColor);
+}
+.footer .sectionContainer .footerLinks {
+  display: grid;
+}
+.footer .sectionContainer .footerLinks .linkTitle {
+  color: var(--blackColor);
+  font-weight: 500;
+  display: block;
+  padding-bottom: 1rem;
+}
+.footer .sectionContainer .footerLinks li a {
+  display: block;
+  color: var(--greytext);
+  transition: var(--transition);
+}
+.footer .sectionContainer .footerLinks li a:hover {
+  color: var(--PrimaryColour);
+  transform: translateY(-7px);
+}
+.footer .company {
+  justify-content: center;
+  margin-top: 1.5rem;
+  padding: 1rem;
+  gap: 1rem;
+  border-top: 1px solid var(--greytext);
+  text-align: center;
+}
+
+.Booking .sectionContainer {
+  text-align: center;
+}
+.Booking .sectionContainer .travelersContainer {
+  margin-top: 1rem;
+  gap: 1.5rem;
+}
+.Booking .sectionContainer .travelersContainer .SingleTraveler {
+  position: relative;
+  height: 320px;
+  width: 85%;
+  max-width: 250px;
+  overflow: hidden;
+  border-radius: 10rem;
+  gap: 1rem;
+  margin: auto;
+}
+.Booking .sectionContainer .travelersContainer .SingleTraveler .destinationImage, .Booking .sectionContainer .travelersContainer .SingleTraveler .travelerImage, .Booking .sectionContainer .travelersContainer .SingleTraveler .travelerNames {
+  position: absolute;
+}
+.Booking .sectionContainer .travelersContainer .SingleTraveler .destinationImage {
+  height: 100%;
+  width: 100%;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.Booking .sectionContainer .travelersContainer .SingleTraveler .travelerImage {
+  height: 50px;
+  width: 50px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 50%;
+  bottom: 30px;
+  left: 40%;
+  transform: translateX(-50%);
+  border: 5px solid rgba(225, 255, 255, 0.637);
+  transition: var(--transition);
+  animation: animated 2.3s infinite;
+}
+@keyframes animated {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(8px);
+  }
+  100% {
+    transform: translateY(8px);
+  }
+}
+.Booking .sectionContainer .travelersContainer .SingleTraveler .travelerNames {
+  bottom: -100%;
+  width: 100%;
+  height: -moz-max-content;
+  height: max-content;
+  background: var(--WhiteColor);
+  padding: 1.5rem 1rem;
+  transition: var(--transition);
+  animation: animatedBorders 2.3s infinite;
+}
+.Booking .sectionContainer .travelersContainer .SingleTraveler .travelerNames span {
+  display: block;
+  color: black;
+  font-weight: 700;
+}
+.Booking .sectionContainer .travelersContainer .SingleTraveler .travelerNames p {
+  color: var(--PrimaryColour);
+  font-style: italic;
+}
+@keyframes animatedBorders {
+  0% {
+    border-radius: 0rem;
+  }
+  50% {
+    border-radius: 2rem;
+  }
+  100% {
+    border-radius: 0rem;
+  }
+}
+.Booking .sectionContainer .travelersContainer .SingleTraveler:hover .travelerNames {
+  bottom: 0;
+  transition: 3s ease-in-out;
+}
+.Booking .sectionContainer .travelersContainer .SingleTraveler:hover .travelerImage {
+  bottom: 110px;
+  transition: 1s ease-in-out;
+}
+
+@media screen and (min-width: 480px) {
+  .home {
+    padding-top: 12rem;
+  }
+  .Search .sectionContainer .SearchInputs {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .Booking .sectionContainer .travelersContainer {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .footer .sectionContainer {
+    align-items: flex-start;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .footer .sectionContainer .footerLinks {
+    justify-content: center;
+  }
+}
+@media screen and (min-width: 570px) {
+  .home .mainText {
+    width: 80%;
+  }
+  .home .homeImages .video {
+    border-radius: 15rem;
+  }
+  .home .homeImages .plane {
+    position: absolute;
+    width: 95%;
+    top: -8%;
+  }
+  .Search .sectionContainer .btns {
+    border-radius: 3rem;
+    flex-direction: row;
+  }
+  .support .sectionContainer .infoDiv .textDiv {
+    margin-top: 2rem;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .footer .sectionContainer {
+    padding-top: 2rem;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .footer .sectionContainer .footerLinks {
+    justify-content: center;
+  }
+}
+@media screen and (min-width: 570px) {
+  .hone .mainText {
+    width: 80%;
+  }
+  .hone .homeImages .videoDiv {
+    width: 80%;
+  }
+  .hone .homeImages .videoDiv .video {
+    height: 100%;
+    width: 100%;
+    border-radius: 15rem;
+  }
+  .hone .homeImages .plane {
+    width: 95;
+    top: -8%;
+  }
+  .Search .sectionContainer .btn {
+    border-radius: 3rem;
+    flex-direction: row;
+  }
+  .Search .sectionContainer .SearchInputs {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .footer .sectionContainer {
+    padding-top: 2rem;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (min-width: 768px) {
+  .navBar {
+    align-items: center;
+  }
+  .navBar .navBarOne .none {
+    display: flex;
+    gap: 1.5rem;
+  }
+  .navBar .navBarOne .none li {
+    font-size: 13px;
+    gap: 0.5rem;
+    color: var(--textColor);
+  }
+  .navBar .navBarOne .none li:hover {
+    color: var(--PrimaryColour);
+    text-decoration: underline;
+  }
+  .navBar .navBartTwo {
+    justify-content: space-between;
+    align-items: center;
+  }
+  .navBar .navBartTwo .logoDiv .Logo {
+    max-width: 20%;
+  }
+  .navBar .navBartTwo .menu {
+    flex-direction: row;
+    gap: 0.5rem;
+  }
+  .navBar .navBartTwo .menu .listItems {
+    padding: 0.5rem;
+    font-size: 14px;
+    cursor: pointer;
+    color: var(--textColor);
+    font-weight: 700;
+  }
+  .navBar .navBartTwo .menu .listItems:hover {
+    color: var(--PrimaryColour);
+    font-weight: 700;
+  }
+  .navBar .navBartTwo .btnOne, .navBar .navBartTwo .toggleIcon {
+    display: none;
+  }
+  .Search .sectionContainer .btn {
+    width: 70%;
+    border-radius: 3rem;
+    flex-direction: row;
+  }
+  .Search .sectionContainer .SearchInputs {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .Search .sectionContainer .SearchInputs .singleInput .texts {
+    width: 100%;
+  }
+  .support .sectionContainer .infoDiv {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    margin-top: 5rem;
+  }
+  .support .sectionContainer .infoDiv .textDiv {
+    margin-top: 0rem;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .Booking .sectionContainer .travelersContainer {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media screen and (min-width: 968px) {
+  .home {
+    padding-top: 13rem;
+  }
+  .home .mainText {
+    width: 70%;
+    padding-bottom: 1.5rem;
+    font-size: 22px;
+    line-height: 4rem;
+  }
+  .Search .sectionContainer .SearchInputs {
+    grid-template-columns: repeat(5, 1fr);
+  }
+  .Booking .sectionContainer .travelersContainer {
+    grid-template-columns: repeat(4, 1fr);
+    margin: 3rem 0;
+  }
+}/*# sourceMappingURL=main.css.map */
